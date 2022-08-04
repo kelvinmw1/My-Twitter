@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.login{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.part1{
+    height: 100vh;
+    width: 60%;
+    background-image: url(../images/lohp_en_1302x955.png);
+    position: relative;
+   
+}
+.img1{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    height: 300px;
+    width: 400px;
+}
+.part2{
+    height: 100vh;
+    width: 50%;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+.logo1{
+    height: 70px;
+    width: 70px;
+}
+.part2 h1{
+    font-size: 70px;
+    font-weight: bolder;
+}
+.part2 h2{
+    margin-top:  30px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.google{
+    margin-top: 30px;
+    width: 300px;
+    border-radius: 40px;
+    height: 30px;
+    border-width: 1px;
+    text-align: center;
+  
+
+}
+.apple{
+    margin-top: 30px;
+    width: 300px;
+    border-radius: 40px;
+    height: 30px;
+    border-width: 1px;
+    text-align: center;
+}
+.or{
+  margin-top: 10px;
+  margin-left: 150px;
+}
+.signup{
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    height: 40px;
+    width: 300px;
+    background-color:rgb(29, 155, 240);
+    border-radius: 30px;
+    margin-top: 20px;
+    border-width: 1px;
+}
+.by{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.al{
+    margin-top: 60px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.signin{
+    margin-top: 30px;
+    height: 40px;
+    width: 300px;
+    background-color:white;
+    color:rgb(29, 155, 240);
+    font-weight: bolder;
+    border-radius: 30px;
+    border-width: 1px;
+
+}
+.home{
+    display: flex;
+}
+.section1{
+    height: 100vh;
+    width: 20%;
+ 
+}
+.section2{
+    height: 100vh;
+    width: 50%;
+    
+}
+.section3{
+    height: 100vh;
+    width: 30%;
+   
+}
+
+.logo2{
+    height: 100px;
+    width: 100px;
+}
+
+.homebtn{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.explore{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.notification{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.messages{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.bookmarks{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.lists{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.profile{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.more{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+}
+.tweet{
+    width: 200px;
+    height: 40px;
+    margin-top: 50px;
+    background-color:rgb(29, 155, 240);
+    color:white;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    border-radius: 30px;
+
+}
+.handle{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    margin-top: 100px;
+}
+.texts h1{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.whp{
+    display: flex;
+}
+.hpn{
+
+
+    border: none;
+    margin-top: 80px;
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+ 
+}
+.twt{
+    width: 100px;
+    height: 40px;
+    margin-top: 150px;
+    margin-left: 100px;
+    background-color:rgb(29, 155, 240);
+    color:white;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    border-radius: 30px;
+}
+.feed{
+    display: flex;
+}
+.pp{
+    height: 60px;
+    width: 60px;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal-body input{
+    margin-bottom: 10px;
+}
