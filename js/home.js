@@ -22,6 +22,25 @@ firebase.auth().onAuthStateChanged((user)=>{
             })
         }
 
+        document.getElementById("twt").onclick = function(){
+
+            let tweet = document.getElementById("tweetvalue").value;
+
+            let timestamp = new Date();
+
+            firebase.firestore().collection("tweets").doc().set({
+
+                theTweet:tweet,
+                tweetTime:timestamp
+            }).then(()=>{
+                window.location.reload();
+
+            }).catch((error)=>{
+                
+            })
+
+        }
+
 
 
 
