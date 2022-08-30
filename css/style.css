@@ -272,3 +272,26 @@
     border-radius: 30px;
 
 }
+.distweet p{
+    margin-left: -300px;
+
+}
+.matweet{
+    display: flex;
+}
+.img{
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+
+}
+.distweet i{
+    
+ 
+    margin-left: -90px;
+    margin-right: 0px;
+}
+.distweet h1{
+    font-size: 10px;
+}
