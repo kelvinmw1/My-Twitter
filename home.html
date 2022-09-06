@@ -42,17 +42,20 @@
                 </div>
              
             </div>
+            <div>
+                <button class=" logout btn btn-primary" id="logout">logout</button>
+            </div>
             <button class="btn btn-primary">Tweet</button>
 
             <div class="bottomProfileCont">
                 <div class="profilePlaceholder"></div>
                 <div class="bottomProfile">
-                    <p id="username">Username</p>
-                    <p>username</p>
+                    <p>Username</p>
+                    <p id="username"></p>
                 </div>
             </div>
 
-            <!-- <button id="logout">Logout</button> -->
+           
         </div>
 
         <div class="tweetSection">
@@ -62,15 +65,32 @@
 
             <div class="tweetBox">
                 <div class="profilePlaceholder"></div>
-                <input type="text" id="tweetInput" placeholder="What's happening?">
+                <input type="text" id="tweetvalue" placeholder="What's happening?">
+                <button class="btn btn-primary" id="tweet">tweet</button>
             </div>
-            <div class="tweetButtons">
-                <div></div>
-                <button id="disabledBtn" class="btn btn-primary disabled">Tweet</button>
-                <button id="tweetBtn" class="btn btn-primary" style="display: none;">Tweet</button>
-            </div>
+           
 
-            <div id="allTweetsContainer">
+            <div id="alltweets">
+
+                <!-- Button trigger modal -->
+
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Options</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Edit</p>
+                            <p>Delete</p>
+                            <p>Report</p>
+                        </div>                        
+                    </div>
+                    </div>
+                </div>
                 
 
 

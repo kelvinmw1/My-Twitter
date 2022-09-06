@@ -16,21 +16,24 @@ firebase.auth().onAuthStateChanged((user)=>{
             let theUserName = doc.data().userName;
             var thebio = doc.data().bio;
             var thesite = doc.data().site;
+            let profileImage = doc.data().profileImage;
             
         
 
             // set the element to contain the username date and email retrived above
 
             document.getElementById("username").innerText = theUserName
-            document.getElementById("userbio").innerText = thebio
-            document.getElementById("usersite").innerText = thesite
+            document.getElementById("bio").innerText = thebio
+            document.getElementById("site").innerText = thesite
+            
+            document.getElementById("profImage").src = profileImage;
 
                //show username on text input
         document.getElementById("editname").value = theUserName;
         })
 
         //edit account
-        document.getElementById("editchanges").onclick = function(){
+        document.getElementById("saveChanges").onclick = function(){
 
            var editname = document.getElementById("editname").value;
            var editbio = document.getElementById("editbio").value;
@@ -50,15 +53,15 @@ firebase.auth().onAuthStateChanged((user)=>{
                 window.location.reload();
             })
         }  //upload profile photo
-            document.getElementById("profilephoto").onclick = function(){
+            document.getElementById("upload").onclick = function(){
                 //get files from html
-                let myphoto = document.getElementById("profilepic").files[0];
+                let profileImage = document.getElementById("Profileimage").files[0];
                 //storage reference
 
                 let storageref = firebase.storage().ref();
-                let uploadtask = storageref.child("photo/").child(Math.random() + myphoto.name).put(myphoto);
+                let uploadtask = storageref.child("photo/").child(Math.random() + profileImage.name).put(profileImage);
 
-                uploadtask.on('state_changed', (snapshot)=>{
+                uploadtask.on('state_changed', (snapshot) =>{
                     let uploadprogress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                     console.log(uploadprogress)
                 },(error)=>{
@@ -73,7 +76,7 @@ firebase.auth().onAuthStateChanged((user)=>{
 
                         //updating the image uploaded to my firestore
                         firebase.firestore().colletion("users").doc(userId).update({
-                            profilephoto:downloadURL
+                            profileImage: downloadURL
                         }).then(()=>{
                             console.log("profile picture uploaded successfully")
                             window.location.reload();

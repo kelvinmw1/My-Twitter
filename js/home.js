@@ -2,30 +2,34 @@ firebase.auth().onAuthStateChanged((user)=>{
 
     if(user){
         console.log("user is logged in");
+        
 
-        //logic
+       
 
         //check user id
 
         var userId = user.uid;
         var userEmail = user.email;
-        console.log(userId);
-        console.log(userEmail);
+        var userName = user.userName;
 
-         //send tweet
-        document.getElementById("twt").onclick = function(){
+        
+        //send tweet
+        document.getElementById("tweet").onclick = function(){
 
             let tweet = document.getElementById("tweetvalue").value;
+            
 
             let timestamp = new Date();
 
            
 
-            firebase.firestore().collection("tweets").doc().set({
+           let sendtweet = firebase.firestore().collection("tweets").doc();
+            sendtweet.set({
 
                 theTweet:tweet,
                 tweetTime:timestamp,
-                userId:userId
+                userId:userId,
+                tweetId:sendtweet.id
 
             }).then(()=>{
                 window.location.reload();
@@ -55,10 +59,8 @@ firebase.auth().onAuthStateChanged((user)=>{
                 var theuserid = theuser.data().userId;
                 var theusername = theuser.data().userName;
 
-            })
-        })
+               // pulling all tweets
 
-        //pulling all tweets
 
         firebase.firestore().collection("tweets").get().then((querySnapshot)=>{
 
@@ -70,26 +72,20 @@ firebase.auth().onAuthStateChanged((user)=>{
 
                 if(theuserid == theId){
 
-                    content += '<div class="distweet">';  
-                
-                            content +='<div class="matweet">'
-                                content += '<p class="img"></p>';
-                                content +='<h1>  </h1>';
-                                content +='<h2></h2>';
-                                content +='<h3></h3>';
-                            content +='</div>'
+                    
+                    content += '<div class="distweet">'; 
+                            content += '<p class="tweetusername">'+theusername+'</p>'
+                            content += '<p class="usertweet">'+theTweet+'</p>'
 
-                            content += '<p class="tweetusername">'+userName+'</p>'
-                            content += '<p>'+theTweet+'</p>'
-
-                            content +='<div class="maneno">'
+                            content +='<div class="tweeticons">'
                                 content += '<i class="fa fa-comment-o" aria-hidden="true"></i>'
                                 content += '<i class="fa fa-retweet" aria-hidden="true"></i>'
                                 content += '<i class="fa fa-heart-o" aria-hidden="true"></i>'
                                 content += '<i class="fa fa-share-alt" aria-hidden="true"></i>'
+                                content += '<i class="fa fa-ellipsis-v" aria-hidden="true"data-bs-toggle="modal" data-bs-target="#exampleModal"></i>'
+                               
 
                             content +='</div>'
-
                     content += '</div>';
                 }
     
@@ -98,6 +94,11 @@ firebase.auth().onAuthStateChanged((user)=>{
             $("#alltweets").append(content);
 
         })
+
+            })
+        })
+
+        
 
 
     }else{

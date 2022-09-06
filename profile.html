@@ -43,17 +43,18 @@
          
         </div>
         <button class="btn btn-primary">Tweet</button>
+        
 
         <div class="bottomProfileCont">
             <div class="profilePlaceholder"></div>
             <div class="bottomProfile">
                 <p id="username"></p>
-                <p>@username</p>
             </div>
         </div>
 
-        <!-- <button id="logout">Logout</button> -->
+        
     </div>
+    
 
     <div class="tweetSection profSection">
 
@@ -64,27 +65,46 @@
         <div class="coverImage">
 
         </div>
-        <div class="mainProfImage" id="mainProfImage"></div>
+        <div class="mainProfImage" id="ProfImage"></div>
 
         <a class="edtBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit Profile</a>
 
         <div class="profContent">
-            <p id="profName"></p>
-            <p id="profUserNamed"></p>
-
+            <p id="username"></p>
             <p id="bio"></p>
-
-            <div class="d-flex">
-                <p>0 Following</p>
-                <p>0 Followers</p>
-            </div>
+            <p id="site"></p>
         </div>
+        
+            <!-- Button trigger modal -->
+            <button type="button" class="upload" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Profile Photo
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="file" id="profileimage">
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="upload">upload</button>
+                    </div>
+                </div>
+                </div>
+            </div>
        
     </div>
 
     <div class="homeRight">
 
     </div>
+    
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -95,26 +115,22 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div>
-                    <input type="file" id="profileImage">
-                    <button class="btn btn-primary" id="upload">Upload</button>
-                </div>
-                <p style="margin-top: 10px; margin-bottom: 10px;" id="progress"></p>
 
                 <div class="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" id="progressBar" ></div>
                 </div>
                 
                 <label for="">Edit Name</label>
-                <input id="edtName" type="text" class="form-control">
+                <input id="editname" type="text" class="form-control">
                 <label for="">Edit Bio</label>
-                <input id="edtBio" type="text" class="form-control">
+                <input id="editbio" type="text" class="form-control">
+                <label for="">Edit Site</label>
+                <input id="editsite" type="text" class="form-control">
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
             </div>
-        </div>
         </div>
     </div>
   </section>
