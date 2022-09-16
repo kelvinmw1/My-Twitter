@@ -376,3 +376,6 @@ background-color: rgba(220, 220, 220, 0.271);
     background-color: rgba(128, 128, 128, 0.325);
     width: fit-content;
 }
+.modal-body p{
+    cursor: pointer;
+}
